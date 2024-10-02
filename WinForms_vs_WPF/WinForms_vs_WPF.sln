@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34902.65
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms", "WinForms\WinForms.csproj", "{B53C414B-10CF-471B-8024-E13D2C2A426F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsForms", "WindowsForms\WindowsForms.csproj", "{0241D9ED-772C-445B-97DF-BA9D9084526A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{5D0175F4-FBB1-4130-B3F3-392CC684555E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFs", "WPFs\WPFs.csproj", "{3882893D-9AC2-49E3-9D41-1B210F53B7A1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B53C414B-10CF-471B-8024-E13D2C2A426F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B53C414B-10CF-471B-8024-E13D2C2A426F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B53C414B-10CF-471B-8024-E13D2C2A426F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B53C414B-10CF-471B-8024-E13D2C2A426F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5D0175F4-FBB1-4130-B3F3-392CC684555E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5D0175F4-FBB1-4130-B3F3-392CC684555E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5D0175F4-FBB1-4130-B3F3-392CC684555E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5D0175F4-FBB1-4130-B3F3-392CC684555E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0241D9ED-772C-445B-97DF-BA9D9084526A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0241D9ED-772C-445B-97DF-BA9D9084526A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0241D9ED-772C-445B-97DF-BA9D9084526A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0241D9ED-772C-445B-97DF-BA9D9084526A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3882893D-9AC2-49E3-9D41-1B210F53B7A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3882893D-9AC2-49E3-9D41-1B210F53B7A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3882893D-9AC2-49E3-9D41-1B210F53B7A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3882893D-9AC2-49E3-9D41-1B210F53B7A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
