@@ -6,7 +6,44 @@
         xmlns:local="clr-namespace:WPFs"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*" />
+            <ColumnDefinition Width="10*" />
+        </Grid.ColumnDefinitions>
+
+        <!--行の定義-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0"
+               Grid.Column="0"
+               Content="{ Binding Acount }"
+               FontSize="50" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" />
+        <Label Grid.Row="0"
+               Grid.Column="1"
+               Content="{ Binding Bcount }"
+               FontSize="50" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" />
+        <Button Grid.Row="1"
+                Grid.Column="0"
+                IsEnabled="{ Binding Abutton_Is_Enabled }"
+                Content="Aボタン"
+                FontSize="36"
+                Height="100"
+                Width="250" />
+        <Button Grid.Row="1"
+                Grid.Column="1"
+                IsEnabled="{ Binding Bbutton_Is_Enabled }"
+                Content="Bボタン"
+                FontSize="36"
+                Height="100"
+                Width="250" />
     </Grid>
 </Window>

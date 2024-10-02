@@ -36,9 +36,10 @@
             // ButtonA
             // 
             this.ButtonA.Font = new System.Drawing.Font("BIZ UDゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ButtonA.Location = new System.Drawing.Point(87, 146);
+            this.ButtonA.Location = new System.Drawing.Point(141, 234);
+            this.ButtonA.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ButtonA.Name = "ButtonA";
-            this.ButtonA.Size = new System.Drawing.Size(164, 58);
+            this.ButtonA.Size = new System.Drawing.Size(266, 93);
             this.ButtonA.TabIndex = 0;
             this.ButtonA.Text = "Aボタン";
             this.ButtonA.UseVisualStyleBackColor = true;
@@ -47,9 +48,10 @@
             // ButtonB
             // 
             this.ButtonB.Font = new System.Drawing.Font("BIZ UDゴシック", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ButtonB.Location = new System.Drawing.Point(339, 146);
+            this.ButtonB.Location = new System.Drawing.Point(551, 234);
+            this.ButtonB.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.ButtonB.Name = "ButtonB";
-            this.ButtonB.Size = new System.Drawing.Size(164, 58);
+            this.ButtonB.Size = new System.Drawing.Size(266, 93);
             this.ButtonB.TabIndex = 1;
             this.ButtonB.Text = "Bボタン";
             this.ButtonB.UseVisualStyleBackColor = true;
@@ -59,9 +61,10 @@
             // 
             this.ButtonA_Count.AutoSize = true;
             this.ButtonA_Count.Font = new System.Drawing.Font("BIZ UDゴシック", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ButtonA_Count.Location = new System.Drawing.Point(158, 72);
+            this.ButtonA_Count.Location = new System.Drawing.Point(257, 115);
+            this.ButtonA_Count.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.ButtonA_Count.Name = "ButtonA_Count";
-            this.ButtonA_Count.Size = new System.Drawing.Size(22, 23);
+            this.ButtonA_Count.Size = new System.Drawing.Size(36, 37);
             this.ButtonA_Count.TabIndex = 2;
             this.ButtonA_Count.Text = "0";
             this.ButtonA_Count.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -70,22 +73,24 @@
             // 
             this.ButtonB_Count.AutoSize = true;
             this.ButtonB_Count.Font = new System.Drawing.Font("BIZ UDゴシック", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.ButtonB_Count.Location = new System.Drawing.Point(410, 72);
+            this.ButtonB_Count.Location = new System.Drawing.Point(666, 115);
+            this.ButtonB_Count.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.ButtonB_Count.Name = "ButtonB_Count";
-            this.ButtonB_Count.Size = new System.Drawing.Size(22, 23);
+            this.ButtonB_Count.Size = new System.Drawing.Size(36, 37);
             this.ButtonB_Count.TabIndex = 3;
             this.ButtonB_Count.Text = "0";
             this.ButtonB_Count.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(595, 261);
+            this.ClientSize = new System.Drawing.Size(974, 409);
             this.Controls.Add(this.ButtonB_Count);
             this.Controls.Add(this.ButtonA_Count);
             this.Controls.Add(this.ButtonB);
             this.Controls.Add(this.ButtonA);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
