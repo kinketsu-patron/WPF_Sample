@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace ScottPlot_MVVM_Sample
+namespace WPFs
 {
     public class NotifyChanged : INotifyPropertyChanged
     {

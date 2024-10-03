@@ -33,17 +33,53 @@
                VerticalContentAlignment="Center" />
         <Button Grid.Row="1"
                 Grid.Column="0"
-                IsEnabled="{ Binding Abutton_Is_Enabled }"
+                x:Name="Abutton"
+                Command="{ Binding Abutton_Command }"
                 Content="Aボタン"
                 FontSize="36"
                 Height="100"
-                Width="250" />
+                Width="250">
+            <Button.Style>
+                <Style TargetType="{ x:Type Button }">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{ Binding Abutton_Is_Enabled }"
+                                     Value="True">
+                            <Setter Property="IsEnabled"
+                                    Value="True" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{ Binding Abutton_Is_Enabled }"
+                                     Value="False">
+                            <Setter Property="IsEnabled"
+                                    Value="False" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
         <Button Grid.Row="1"
                 Grid.Column="1"
-                IsEnabled="{ Binding Bbutton_Is_Enabled }"
+                x:Name="Bbutton"
+                Command="{ Binding Bbutton_Command }"
                 Content="Bボタン"
                 FontSize="36"
                 Height="100"
-                Width="250" />
+                Width="250">
+            <Button.Style>
+                <Style TargetType="{ x:Type Button }">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{ Binding Abutton_Is_Enabled }"
+                                     Value="True">
+                            <Setter Property="IsEnabled"
+                                    Value="False" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{ Binding Abutton_Is_Enabled }"
+                                     Value="False">
+                            <Setter Property="IsEnabled"
+                                    Value="True" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
     </Grid>
 </Window>
