@@ -47,6 +47,20 @@ namespace WPFs
             }
         }
 
+        private bool _Bbutton_Is_Enabled = true;
+        public bool Bbutton_Is_Enabled
+        {
+            get { return _Bbutton_Is_Enabled; }
+            set
+            {
+                if ( _Bbutton_Is_Enabled != value )
+                {
+                    _Bbutton_Is_Enabled = value;
+                    RaisePropertyChanged( );
+                }
+            }
+        }
+
         public ICommand Abutton_Command { get; }
         public ICommand Bbutton_Command { get; }
 
@@ -57,7 +71,8 @@ namespace WPFs
         {
             Acount = 0;
             Bcount = 0;
-
+            Abutton_Is_Enabled = true;
+            Bbutton_Is_Enabled = false;
             Abutton_Command = new DelegateCommand( ( ) => Abutton_Click( ) );
             Bbutton_Command = new DelegateCommand( ( ) => Bbutton_Click( ) );
         }
@@ -66,12 +81,14 @@ namespace WPFs
         {
             Acount++;
             Abutton_Is_Enabled = false;
+            Bbutton_Is_Enabled = true;
         }
 
         private void Bbutton_Click( )
         {
             Bcount++;
             Abutton_Is_Enabled = true;
+            Bbutton_Is_Enabled = false;
         }
     }
 }

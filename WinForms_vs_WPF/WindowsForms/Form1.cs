@@ -15,24 +15,24 @@ namespace WindowsForms
             _Acount = 0;
             _Bcount = 0;
 
-            ButtonA.Enabled = true;
-            ButtonB.Enabled = false;
+            BtnA.Enabled = true;
+            BtnB.Enabled = false;
         }
 
         private void ButtonA_Click( object sender, EventArgs e )
         {
             _Acount++;
-            ButtonA_Count.Text = _Acount.ToString( );
-            ButtonA.Enabled = false;
-            ButtonB.Enabled = true;
+            Lbl_AClick_Count.Text = _Acount.ToString( );
+            BtnA.Enabled = false;
+            BtnB.Enabled = true;
         }
 
         private void ButtonB_Click( object sender, EventArgs e )
         {
             _Bcount++;
-            ButtonB_Count.Text = _Bcount.ToString( );
-            ButtonA.Enabled = true;
-            ButtonB.Enabled = false;
+            Lbl_BClick_Count.Text = _Bcount.ToString( );
+            BtnA.Enabled = true;
+            BtnB.Enabled = false;
         }
     }
 }
