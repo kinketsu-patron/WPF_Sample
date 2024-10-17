@@ -1,94 +1,58 @@
 ﻿using Prism.Commands;
-using System.Windows.Input;
+using Prism.Mvvm;
 
 namespace WPFs
 {
-    public class MainWindowViewModel : NotifyChanged
+    public class MainWindowViewModel : BindableBase
     {
-        private uint _Acount;
+        private ABCounter m_ABCounter;
+
+        public DelegateCommand Abutton_Command { get; }
+        public DelegateCommand Bbutton_Command { get; }
+
         public uint Acount
         {
-            get { return _Acount; }
-            set
-            {
-                if ( _Acount != value )
-                {
-                    _Acount = value;
-                    RaisePropertyChanged( );
-                }
-            }
+            get { return m_ABCounter.Acount; }
+            set { m_ABCounter.Acount = value; }
         }
 
-        private uint _Bcount;
         public uint Bcount
         {
-            get { return _Bcount; }
-            set
-            {
-                if ( _Bcount != value )
-                {
-                    _Bcount = value;
-                    RaisePropertyChanged( );
-                }
-            }
+            get { return m_ABCounter.Bcount; }
+            set { m_ABCounter.Bcount = value; }
         }
 
-        private bool _Abutton_Is_Enabled = true;
         public bool Abutton_Is_Enabled
         {
-            get { return _Abutton_Is_Enabled; }
-            set
-            {
-                if ( _Abutton_Is_Enabled != value )
-                {
-                    _Abutton_Is_Enabled = value;
-                    RaisePropertyChanged( );
-                }
-            }
+            get { return m_ABCounter.Abutton_Is_Enabled; }
+            set { m_ABCounter.Abutton_Is_Enabled = value; }
         }
 
-        private bool _Bbutton_Is_Enabled = true;
         public bool Bbutton_Is_Enabled
         {
-            get { return _Bbutton_Is_Enabled; }
-            set
-            {
-                if ( _Bbutton_Is_Enabled != value )
-                {
-                    _Bbutton_Is_Enabled = value;
-                    RaisePropertyChanged( );
-                }
-            }
+            get { return m_ABCounter.Bbutton_Is_Enabled; }
+            set { m_ABCounter.Bbutton_Is_Enabled = value; }
         }
-
-        public ICommand Abutton_Command { get; }
-        public ICommand Bbutton_Command { get; }
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
         public MainWindowViewModel( )
         {
-            Acount = 0;
-            Bcount = 0;
-            Abutton_Is_Enabled = true;
-            Bbutton_Is_Enabled = false;
-            Abutton_Command = new DelegateCommand( ( ) => Abutton_Click( ) );
-            Bbutton_Command = new DelegateCommand( ( ) => Bbutton_Click( ) );
+            m_ABCounter = new ABCounter( );
+            m_ABCounter.PropertyChanged += ( sender, e ) => RaisePropertyChanged( e.PropertyName );
+            Abutton_Command = new DelegateCommand( Abutton_Click );
+            Bbutton_Command = new DelegateCommand( Bbutton_Click );
         }
 
         private void Abutton_Click( )
         {
-            Acount++;
-            Abutton_Is_Enabled = false;
-            Bbutton_Is_Enabled = true;
+            m_ABCounter.A_Add( );
         }
 
         private void Bbutton_Click( )
         {
-            Bcount++;
-            Abutton_Is_Enabled = true;
-            Bbutton_Is_Enabled = false;
+            m_ABCounter.B_Add( );
         }
     }
 }
